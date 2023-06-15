@@ -1,0 +1,22 @@
+.filterFields {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.filterFields label {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(21/18);
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.filterFields input {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}

@@ -1,0 +1,54 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 200px;
+    border: 1px solid rgba(33, 33, 33, 0.8);
+}
+
+.formFields {
+    position: relative;
+    display: block;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.formFields label {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(21/18);
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.formFields input {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.formBtn {
+    width: 120px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14/12);
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.8);
+    border-radius: 4px;
+}
+
+.form button:hover, 
+.form button:focus {
+    background-color: #c4d2dd;
+}

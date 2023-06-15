@@ -1,0 +1,24 @@
+.item {
+    margin-bottom: 5px;
+   font-size: 20px; 
+}
+
+.itemBtn {
+    width: 80px;
+    height: 20px;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: calc(14/12);
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.8);
+    border-radius: 4px;
+}
+
+.itemBtn:hover, 
+.itemBtn:focus {
+    background-color: #c4d2dd;
+}

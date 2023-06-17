@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from "./Layout";
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
+import { RestrictedRoute } from "./RestrictedRoute";
+import { PrivateRoute } from "./PrivateRoute";
 
 const HomePage = lazy(() => import('pages/Home'));
 const RegisterPage = lazy(() => import('pages/Register'));
@@ -20,64 +22,29 @@ export default function App () {
 
   return isRefreshing ? (
     <b>Refreshing user...</b>
-  ) : (
+    ) : (  
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Layout />} >
         <Route index element={<HomePage />} />
         <Route
           path="/register"
-          element={<RegisterPage />}
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
+          }
         />
         <Route
           path="/login"
-          element={<LoginPage />}
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+          }
         />
         <Route
           path="/contacts"
-          element={<ContactsPage />}
+          element={
+            <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+          }
         />
       </Route>
     </Routes>
-    );
+  );
 };
-
-
-      
-  //   return (
-  //     <Routes>
-  //     <Route path="/" element={<Layout />}>
-  //       <Route index element={<HomePage />} />
-  //       <Route
-  //         path="/register"
-  //         element={
-  //           <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
-  //         }
-  //       />
-  //       <Route
-  //         path="/login"
-  //         element={
-  //           <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
-  //         }
-  //       />
-  //       <Route
-  //         path="/contacts"
-  //         element={
-  //           <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
-  //         }
-  //       />
-  //     </Route>
-  //   </Routes>
-  //     );
-
-    // return (
-    //   <>
-    //     {/* <AppBar /> */}
-    //   <Routes>
-    //     <Route path="/" element={<Home/>}/>
-    //     <Route path="/register" element={<Register/>} />
-    //     <Route path="/login" element={<Login/>} />
-    //     <Route path="/contacts" element={<Contacts/>} />
-    //   </Routes>
-   
-    //   </>
-    //   );

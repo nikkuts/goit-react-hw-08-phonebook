@@ -33,7 +33,7 @@ export default function ContactForm () {
         e.preventDefault();
         const newContact = {
           name: name,
-          phone: number,
+          number: number,
         };
         dispatch(addContact(newContact)); 
         e.currentTarget.reset();

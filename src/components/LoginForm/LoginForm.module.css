@@ -1,9 +1,55 @@
 .form {
-    width: 320px;
-  }
-  
-  .label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    gap: 24px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    position: relative;
+    border-radius: 8px;
+    padding: 24px 20px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background-color: white;
+  }
+
+  .label input {
+    display: block;
+    width: 250px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    font-size: 14px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+
+  .button {
+    display: inline-block;
+    margin: auto;
+    border: none;
+    border-radius: 4px;
+    padding: 0 16px;
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(16/14);
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #0d5ef5;
+  }
+
+  .button:hover,
+  .button:focus {
+    color: #0d30f5;
+    background-color: rgb(245, 245, 11);
   }

@@ -1,22 +1,20 @@
 .form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    gap: 24px;
     width: 400px;
-    height: 200px;
+    margin-bottom: 48px;
+    border-radius: 8px;
     border: 1px solid rgba(33, 33, 33, 0.8);
 }
 
-.formFields {
-    position: relative;
+.label {
     display: block;
-    width: 200px;
-    margin-top: 10px;
+    width: 250px;
+    height: 32px;
+    margin-top: 24px;
     margin-left: 10px;
-}
-
-.formFields label {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: calc(21/18);
@@ -24,31 +22,44 @@
     color: #000000;
 }
 
-.formFields input {
-    margin-bottom: 20px;
-    width: 200px;
-    height: 20px;
+.label input {
+    display: block;
+    width: 250px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    font-size: 14px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
 
-.formBtn {
-    width: 120px;
-    height: 25px;
-    margin-top: 10px;
+.button {
+    display: inline-block;
+    margin-top: 24px;
     margin-left: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: calc(14/12);
-    text-align: center;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    border: 1px solid rgba(33, 33, 33, 0.8);
+    margin-bottom: 24px;
+    border: none;
     border-radius: 4px;
-}
-
-.form button:hover, 
-.form button:focus {
-    background-color: #c4d2dd;
-}
+    padding: 0 16px;
+    width: 150px;
+    height: 36px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(16/14);
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #0d5ef5;
+  }
+  
+  .button:hover,
+  .button:focus {
+    color: #0d30f5;
+    background-color: rgb(245, 245, 11);
+  }

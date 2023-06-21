@@ -5,7 +5,7 @@
 }
 
 .filterFields label {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: calc(21/18);
@@ -14,9 +14,11 @@
 }
 
 .filterFields input {
-    margin-bottom: 20px;
-    width: 200px;
-    height: 20px;
+    display: block;
+    width: 220px;
+    height: 32px;
+    padding-left: 10px;
+    font-size: 14px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }

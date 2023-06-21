@@ -40,9 +40,8 @@ export default function ContactForm () {
     };
 
       return (
-        <form className={css.form} onSubmit={handleSubmit}>
-          <div className={css.formFields}>
-            <label>
+          <form className={css.form} onSubmit={handleSubmit}>
+            <label className={css.label}>
               Name
             <input
                 type="text"
@@ -53,7 +52,7 @@ export default function ContactForm () {
                 onChange={handleChange}
             />
             </label>
-            <label>
+            <label className={css.label}>
               Number
             <input
                 type="tel"
@@ -64,8 +63,7 @@ export default function ContactForm () {
                 onChange={handleChange}
             />
             </label>
-          </div>
-          <button type="submit" className={css.formBtn}>Add contact</button>
-        </form>
+            <button type="submit" className={css.button}>Add contact</button>
+          </form>
         );     
 };

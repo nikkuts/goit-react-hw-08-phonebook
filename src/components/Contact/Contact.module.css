@@ -1,6 +1,9 @@
 .item {
-    margin-bottom: 5px;
-   font-size: 20px; 
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 20px; 
 }
 
 .itemBtn {

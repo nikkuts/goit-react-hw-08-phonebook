@@ -10,11 +10,13 @@ export default function Contact ({id, name, number}) {
   const handleClick = () => dispatch(deleteContact(id)); 
 
     return (
-      <li className={css.item} key={id}>
-        {name}: {number}
-        <button type="button" name={id} className={css.itemBtn} onClick={handleClick}>
-          Delete
-        </button>
+      <li key={id}>
+        <div className={css.item}>
+          <span>{name}: {number}</span>
+          <button type="button" name={id} className={css.itemBtn} onClick={handleClick}>
+            Delete
+          </button>
+        </div>
       </li>
     )
   };
